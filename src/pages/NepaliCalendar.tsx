@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import AdSpace from '@/components/shared/AdSpace';
-import { Calendar } from 'lucide-react';
 
 const NepaliCalendar = () => {
   return (
@@ -27,7 +26,7 @@ const NepaliCalendar = () => {
               <AdSpace size="banner" />
             </div>
             
-            {/* Hamro Patro Calendar */}
+            {/* Calendar */}
             <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 mb-8">
               <div className="calendar-wrapper flex justify-center">
                 <iframe 
@@ -43,7 +42,7 @@ const NepaliCalendar = () => {
                     margin: 0 
                   }} 
                   allowTransparency={true}
-                  title="Nepali Calendar by Hamro Patro"
+                  title="Nepali Calendar"
                 />
               </div>
             </div>

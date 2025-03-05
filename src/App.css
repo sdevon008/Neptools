@@ -56,7 +56,7 @@
   opacity: 0 !important;
 }
 
-/* Hide copyright elements in Hamro Patro iframe */
+/* Hide copyright elements and branding in Hamro Patro iframe */
 .calendar-wrapper iframe [style*="text-align:center"],
 .calendar-wrapper iframe a[href*="hamropatro.com"],
 .calendar-wrapper iframe img[src*="hamropatro.com"],
@@ -64,8 +64,29 @@
 .calendar-wrapper iframe div[style*="font-size:10px"],
 .calendar-wrapper iframe div[class*="copyright"],
 .calendar-wrapper iframe div[class*="footer"],
-.calendar-wrapper iframe footer {
+.calendar-wrapper iframe footer,
+.calendar-wrapper iframe [class*="logo"],
+.calendar-wrapper iframe [id*="logo"],
+.calendar-wrapper iframe a,
+.calendar-wrapper iframe img[alt*="Hamro"],
+.calendar-wrapper iframe img[alt*="hamro"],
+.calendar-wrapper iframe .hp-widget-logo,
+.calendar-wrapper iframe .logo,
+.calendar-wrapper iframe [class*="brand"],
+.calendar-wrapper iframe [id*="brand"],
+.calendar-wrapper iframe [class*="powered"],
+.calendar-wrapper iframe [id*="powered"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  pointer-events: none !important;
+}
+
+/* Prevent clicks on any links in the iframe */
+.calendar-wrapper iframe a {
+  pointer-events: none !important;
 }
