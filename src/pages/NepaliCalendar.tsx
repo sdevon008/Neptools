@@ -34,9 +34,14 @@ const NepaliCalendar = () => {
                   src="https://www.hamropatro.com/widgets/calender-full.php" 
                   frameBorder="0" 
                   scrolling="no" 
-                  marginWidth="0" 
-                  marginHeight="0" 
-                  style={{ border: 'none', overflow: 'hidden', width: '100%', height: '840px', maxWidth: '800px' }} 
+                  style={{ 
+                    border: 'none', 
+                    overflow: 'hidden', 
+                    width: '100%', 
+                    height: '840px', 
+                    maxWidth: '800px',
+                    margin: 0 
+                  }} 
                   allowTransparency={true}
                   title="Nepali Calendar by Hamro Patro"
                 />
