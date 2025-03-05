@@ -21,7 +21,7 @@ const NepaliCalendar = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
-        <title>Nepali Calendar {currentNepaliYear} | BS to AD Date Converter | Nepali Patro</title>
+        <title>{`Nepali Calendar ${currentNepaliYear} | BS to AD Date Converter | Nepali Patro`}</title>
         <meta name="description" content={`View Nepali Calendar ${currentNepaliYear}, ${currentNepaliYear+1}, ${currentNepaliYear+2} with holidays and festivals. Convert dates between BS and AD. Check Falgun, Chaitra, and Magh calendars.`} />
         <meta name="keywords" content={`nepali calendar, nepali patro, nepali calendar ${currentNepaliYear}, nepali calendar ${currentNepaliYear+1}, nepali calendar ${currentNepaliYear+2}, nepali to english calendar, falgun calendar, chaitra calendar, magh calendar, nepali date, holi 2025, hamro patro`} />
         <link rel="canonical" href="/nepali-calendar" />
@@ -95,7 +95,7 @@ const NepaliCalendar = () => {
                     maxWidth: '800px',
                     margin: 0 
                   }} 
-                  allowTransparency={true}
+                  allowTransparency="true"
                   title="Nepali Calendar"
                 />
               </div>
