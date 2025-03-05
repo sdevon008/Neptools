@@ -56,26 +56,31 @@
   opacity: 0 !important;
 }
 
-/* Hide copyright elements and branding in Hamro Patro iframe */
-.calendar-wrapper iframe [style*="text-align:center"],
-.calendar-wrapper iframe a[href*="hamropatro.com"],
-.calendar-wrapper iframe img[src*="hamropatro.com"],
-.calendar-wrapper iframe div[style*="font-size:11px"],
-.calendar-wrapper iframe div[style*="font-size:10px"],
-.calendar-wrapper iframe div[class*="copyright"],
-.calendar-wrapper iframe div[class*="footer"],
+/* Enhanced rules to hide copyright elements and branding in Hamro Patro iframe */
+.calendar-wrapper iframe *[style*="text-align:center"],
+.calendar-wrapper iframe *[class*="copyright"],
+.calendar-wrapper iframe *[class*="footer"],
+.calendar-wrapper iframe *[class*="brand"],
+.calendar-wrapper iframe *[class*="powered"],
+.calendar-wrapper iframe *[id*="copyright"],
+.calendar-wrapper iframe *[id*="footer"],
+.calendar-wrapper iframe *[id*="brand"],
+.calendar-wrapper iframe *[id*="powered"],
 .calendar-wrapper iframe footer,
-.calendar-wrapper iframe [class*="logo"],
-.calendar-wrapper iframe [id*="logo"],
-.calendar-wrapper iframe a,
+.calendar-wrapper iframe header,
+.calendar-wrapper iframe a[href*="hamropatro"],
+.calendar-wrapper iframe a[target="_blank"],
+.calendar-wrapper iframe img[src*="hamropatro"],
 .calendar-wrapper iframe img[alt*="Hamro"],
 .calendar-wrapper iframe img[alt*="hamro"],
+.calendar-wrapper iframe div[style*="font-size:11px"],
+.calendar-wrapper iframe div[style*="font-size:10px"],
+.calendar-wrapper iframe div[style*="font-size:9px"],
+.calendar-wrapper iframe div[style*="font-size:8px"],
 .calendar-wrapper iframe .hp-widget-logo,
 .calendar-wrapper iframe .logo,
-.calendar-wrapper iframe [class*="brand"],
-.calendar-wrapper iframe [id*="brand"],
-.calendar-wrapper iframe [class*="powered"],
-.calendar-wrapper iframe [id*="powered"] {
+.calendar-wrapper iframe [class*="logo"],
+.calendar-wrapper iframe [id*="logo"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -86,7 +91,26 @@
   pointer-events: none !important;
 }
 
-/* Prevent clicks on any links in the iframe */
+/* Disable all links in the iframe */
 .calendar-wrapper iframe a {
   pointer-events: none !important;
+  cursor: default !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Add a transparent overlay to prevent clicking on any elements */
+.calendar-wrapper {
+  position: relative;
+}
+
+.calendar-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
 }

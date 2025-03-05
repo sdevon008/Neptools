@@ -86,6 +86,7 @@ const NepaliCalendar = () => {
                   src="https://www.hamropatro.com/widgets/calender-full.php" 
                   frameBorder="0" 
                   scrolling="no" 
+                  sandbox="allow-scripts allow-same-origin"
                   style={{ 
                     border: 'none', 
                     overflow: 'hidden', 
