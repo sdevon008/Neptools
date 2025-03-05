@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from '@/components/layout/Navbar';
@@ -95,7 +94,7 @@ const NepaliCalendar = () => {
                     maxWidth: '800px',
                     margin: 0 
                   }} 
-                  allowTransparency="true"
+                  allowTransparency={true}
                   title="Nepali Calendar"
                 />
               </div>
